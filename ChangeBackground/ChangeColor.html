@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    body{
+        border: 2px solid rgb(199, 232, 199);
+        height: 400px;
+        align-items: center;
+        justify-content: center;
+        display:flex;
+        gap: 10px;
+    }
+    .button{
+        display:flex;
+        gap: 10px;
+    }
+    #green,#blue,#yellow,#red{
+        width:50px;
+        height:50px;
+        border:2px solid brown;
+        text-align: center;
+    }
+    #green{
+        background-color: green;
+    }
+    #blue{
+        background-color: blue;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+    #red{
+        background-color: red;
+    }
+</style>
+<body>
+    
+        <div class="button">
+
+            <div id="green">Green</div>
+            <div id="blue">Blue</div>
+            <div id="yellow">Yellow</div>
+            <div id="red">Red</div>
+
+        </div>
+    
+
+</body>
+<script>
+    console.log("Moni");
+    const buttons = document.querySelectorAll('.button > div'); // Ensure selection of all divs inside .button
+    const body = document.querySelector('body');
+    buttons.forEach(function(button) {
+        console.log(button);
+        button.addEventListener('click', function(e) {
+            console.log(e.target); // Logs the text content of the clicked div
+            if(e.target.id==='green'){
+                body.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id==='yellow'){
+                body.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id==='red'){
+                body.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id==='blue'){
+                body.style.backgroundColor=e.target.id;
+            }
+        });
+    });
+</script>
+</html>
